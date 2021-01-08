@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 
 public class SolicitaSeguroObjetosPagina {
-	//Webdriver driver = new ChromeDriver();
+	WebDriver driver = new ChromeDriver();
 	
 	// Abas informações
 	protected WebElement entervehicledata;
@@ -91,7 +92,8 @@ public class SolicitaSeguroObjetosPagina {
 	protected WebElement prevselectpriceoption;
 	protected WebElement sendemail;
 	
-	protected String msg;
-	//protected WebElement btnok  = driver.findElement(By.name("OK"));
+	
+	protected WebElement msgsuccess = driver.findElement(By.name("Sending e-mail success!"));
+	protected WebElement btnok  = driver.findElement(By.name("OK"));
 
 }

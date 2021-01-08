@@ -318,9 +318,9 @@ public class SolicitaSeguroPage extends SolicitaSeguroObjetosPagina{
 	}
 	
 	public void ValidaEnvio( ) throws Throwable {
-//		
+		
 //		try {
-//			msg.exist();
+//			msgsuccess.exist();
 //			btnok.exist();
 //			Assert.assertTrue("Cotação enviada com sucesso", true);
 //		} catch (Exception e) {

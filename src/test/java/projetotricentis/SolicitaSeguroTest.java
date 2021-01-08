@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(plugin = {"junit:projetoTricentisResults.xml" }, 
 monochrome = true, 
 features = {
-		"src/main/java/projetotricentis/SolicitaSeguro.feature",
+		"src/main/java/SolicitaSeguro.feature",
 		},
 glue = "projetotricentis"
 )

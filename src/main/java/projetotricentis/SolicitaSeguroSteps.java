@@ -8,8 +8,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
 
 public class SolicitaSeguroSteps {
+	private static WebDriver driver;
 	SolicitaSeguroPage solicitaseguro = new SolicitaSeguroPage();
 	private String MARCA, MODELO, CILINDRO, DESMOTOR, FABRICACAO, ASSENTOS, DIRDIREITA, NUMASSENTOS, COMBUSTIVEL, CARGA, PESO, PRECOTAB, MATRICULA, MILHAGEMANUAL;
 	private String NOME, SOBRENOME, NASCTO, GENERO, ENDERECO, PAIS, CEP, CIDADE, OCUPACAO, HOBIE, DOMINIO, CENARIO;
@@ -89,13 +95,16 @@ public class SolicitaSeguroSteps {
 	}
 	
 	@Before
-	public void iniciar(Scenario scenario) throws Exception {
+	public void iniciar() throws Exception {
 		
-		
+		//System.setProperty("webdriver.chrome.driver", "projetotricentis/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver .navigate().to("http://sampleapp.tricentis.com/101/app.php");
 	}
 
 	@After
-	public static void cleanup(Scenario scenario) throws Exception {
+	public static void cleanup() throws Exception {
 		
 	}
 
